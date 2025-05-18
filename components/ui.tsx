@@ -60,10 +60,10 @@ export default function UI({data}: {data: Homepage}){
         document.addEventListener("touchstart", handleMouseOutside);
         
         return () => {
-            document.addEventListener("mousedown", handleMouseOutside);
-            document.addEventListener("touchstart", handleMouseOutside);   
+            document.removeEventListener("mousedown", handleMouseOutside);
+            document.removeEventListener("touchstart", handleMouseOutside);   
         }
-    })
+    }, [])
     const list = [
         {
             animation: second,

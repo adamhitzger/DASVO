@@ -36,7 +36,7 @@ console.log(data, success, error)
     const sentMail = await smtp.sendMail({
         subject: "Nová zpáva z portfolio webu",
         from: process.env.FROM_EMAIL,
-        to: "adam.hitzger@icloud.com",
+        to: process.env.TO_EMAIL,
         text: `Celé jméno: ${data.name} ${data.surname},\n E-mail: ${data.email},\n Tel. číslo: ${data.tel},\n Zpráva: ${data.message}, Vyšetření: ${data.naposledy}, Datum narození: ${new Intl.DateTimeFormat("cs-CZ").format(data.birth)}\n`
     })
 
