@@ -15,15 +15,15 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Label } from "./ui/label";
 import toast from "react-hot-toast"
-import Lottie from "react-lottie"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import fifth from "../public/fifth.json"
 import fourth from "../public/fourth.json"
 import third from "../public/third.json"
 import second from "../public/second.json"
 import first from "../public/first.json"
 import sixth from "../public/sixth.json"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
- 
+import dynamic from 'next/dynamic';
+const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const actionState: ActionResponse<Contact> = {
     success: false,
@@ -65,31 +65,31 @@ export default function UI({data}: {data: Homepage}){
         }
     }, [])
     const list = [
-        {
-            animation: second,
-            text: "Založení karty, změření krevního tlaku, pulzu, výšky a váhy"
-        },
-        {
-            animation: fourth,
-            text: "Klinické vyšetření pacienta, včetně změření krevního tlaku, pulzu, výšky a váhy."
-        },
-        {
-            animation: third,
-            text: "Provedení kožních testů na předloktí k určení alergické přecitlivělosti"
-        },
-        {
-            animation: first,
-            text: "Vyšetření dechu spirometrem, popř. přístrojem na měření vydechovaného CO, stupně okysličení periferní krve a fyzikalní vyšetření."
-        },
-        {
-            animation: fifth,
-            text: "Odběry krve"
-        },
-        {
-            animation: sixth,
-            text: "Zhodnocení vyšetření a doporučení léčebných opatřeních a medikace zhodnocení vyšetření a doporučení medikace a režimových, ev. dietologických opatření"
-        }
-    ]
+            {
+                animation: second,
+                text: "Založení karty, změření krevního tlaku, pulzu, výšky a váhy"
+            },
+            {
+                animation: fourth,
+                text: "Klinické vyšetření pacienta, včetně změření krevního tlaku, pulzu, výšky a váhy."
+            },
+            {
+                animation: third,
+                text: "Provedení kožních testů na předloktí k určení alergické přecitlivělosti"
+            },
+            {
+                animation: first,
+                text: "Vyšetření dechu spirometrem, popř. přístrojem na měření vydechovaného CO, stupně okysličení periferní krve a fyzikalní vyšetření."
+            },
+            {
+                animation: fifth,
+                text: "Odběry krve"
+            },
+            {
+                animation: sixth,
+                text: "Zhodnocení vyšetření a doporučení léčebných opatřeních a medikace zhodnocení vyšetření a doporučení medikace a režimových, ev. dietologických opatření"
+            }
+        ]
     console.log(data)
     return(
         <main className="flex flex-col min-h-screen items-center space-y-5">
@@ -132,7 +132,7 @@ export default function UI({data}: {data: Homepage}){
             </div>
             
          </section>
-         <section className="w-full p-8 flex flex-col gap-5 bg-white text-center text-black">
+                 <section className="w-full p-8 flex flex-col gap-5 bg-white text-center text-black">
             <h1 className="text-4xl md:text-6xl font-bold underline underline-offset-2 decoration-wavy decoration-3 decoration-foreground">Jak probíhá 1. vyšetření ?</h1>
             <div className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 justify-items-center gap-5">
                 {list.map((l,i) => (
