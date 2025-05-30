@@ -36,6 +36,7 @@ export interface Homepage {
   personal: Personal[]
   prices: Cenik[] // opravena chyba: v Sanity jsi měl `of: [ { type: "string" }, { type: "number" } ]`, což je neplatné
   pojistne: Pojistovny[],
+  ordinacniDoba: any,
   ordinacniHodiny: any,
 }
 

@@ -13,7 +13,7 @@ export default function Navbar(){
     return(
         <nav className="w-full gap-3 flex flex-row bg-white p-3 justify-between items-center text-black">
             <Link href={"/"} className="text-3xl md:text-5xl font-bold p-3 flex-nowrap text-white bg-foreground rounded-xl">
-            Dasvo &copy;
+            Dasvo &reg;
             </Link>
 
             <div className="hidden md:flex flex-row  w-1/2 justify-between text-2xl">

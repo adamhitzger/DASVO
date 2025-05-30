@@ -19,5 +19,6 @@ import { groq } from "next-sanity";
     name,
     code
   },
+  ordinacniDoba,
   ordinacniHodiny,
 }`

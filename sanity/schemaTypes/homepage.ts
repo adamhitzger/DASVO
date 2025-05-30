@@ -62,8 +62,16 @@ export const homepage = defineType({
             ]
         }),
         defineField({
+            name: "ordinacniDoba",
+            title: "Ordinační Hodiny",
+             type: "array",
+            of: [
+                {type:"block"}
+            ]
+        }),
+        defineField({
             name: "ordinacniHodiny",
-            title: "Prdinační hodiny",
+            title: "Změna ordinacni doby",
              type: "array",
             of: [
                 {type:"block"}

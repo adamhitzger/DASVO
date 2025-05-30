@@ -14,6 +14,6 @@ export default async function Home() {
       <Navbar/>
       <UI data={data}/>
       <Footer/>
-</>
+    </>
   );
 }

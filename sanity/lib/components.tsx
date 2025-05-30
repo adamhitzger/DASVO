@@ -3,7 +3,7 @@ import { PortableTextComponents } from "next-sanity";
 
 export const components: Partial<PortableTextComponents> = {
     list: {
-        bullet: ({ children }) => <ul className="mt-xl">{children}</ul>,
+        bullet: ({ children }) => <ul className="mt-xl ml-5">{children}</ul>,
         number: ({ children }) => <ol className="mt-lg">{children}</ol>,
     },
     listItem: {
@@ -16,7 +16,7 @@ export const components: Partial<PortableTextComponents> = {
         h4: ({ children }) => <h4 className="text-lg font-bold">{children}</h4>,
         h5: ({ children }) => <h5 className="font-bold">{children}</h5>,
         h6: ({ children }) => <h6 className="font-bold">{children}</h6>,
-
+        normal: ({ children }) => <p className="text-base">{children}</p>,
         blockquote: ({ children }) => <blockquote className="border-l-foreground">{children}</blockquote>,
     },
     marks: {
