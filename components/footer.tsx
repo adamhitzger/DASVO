@@ -9,7 +9,7 @@ export default function Footer(){
         <footer className="w-full p-5 bg-foreground text-white gap-5 flex flex-col md:flex-row text-xl">
             <div className="w-full md:w-1/2 flex flex-col">
                 <h3 className="text-3xl font-bold underline underline-offset-4 decoration-wavy decoration-2">Informace</h3>
-                <span className="font-bold">E-mail: <a href="mailto:alergologiehb@quick.cz" className="font-light">alergologiehb@quick.cz</a></span>
+                <span className="font-bold">E-mail: <a href="mailto:lekar@dasvo.cz" className="font-light">lekar@dasvo.cz</a></span>
                 <span className="font-bold">E-mail na sestru: <a href="mailto:sestra@dasvo.cz" className="font-light">sestra@dasvo.cz</a></span>
                 <span className="font-bold">Telefonní číslo: <a href="tel:+420 569 434 375" className="font-light">+420  569 434 375</a></span>
                 <span className="font-bold">IČO: <span className="font-light">28814801</span></span>

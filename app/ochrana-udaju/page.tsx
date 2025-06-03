@@ -12,13 +12,13 @@ export default function PodminkyPage() {
                     <div className='space-y-3'>
                         <h2 className='text-2xl underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground'>1. Základní informace</h2>
                         <p>
-                        Tyto zásady pro zpracování osobních údajů se týkají návštěvníků webového rozhraní umístěného na webové stránce dostupné na internetové adrese www.dasvohb.cz (dále také jen „portál“).
-Správcem osobních údajů je: Dasvo s.r.o., IČO: 28814801<br/>
+                        Tyto zásady pro zpracování osobních údajů se týkají návštěvníků webového rozhraní umístěného na webové stránce dostupné na internetové adrese www.dasvo.cz (dále také jen „portál“).
+Správcem osobních údajů je: DASVO s.r.o., IČO: 28814801<br/>
 sídlem Mahenova 3649, 58001 Havlíčkův Brod, zapsaná na ŽÚ Havlíčkův Brod.<br/>
 Poskytovatel není plátcem DPH.<br/>
-email: alergologiehb@quick.cz<br/>
+email: lekar@dasvo.cz<br/>
 telefon: +420 782 870 692<br/>
-webová adresa: www.dasvohv.cz
+webová adresa: www.dasvo.cz
 (dále také jen „správce“).<br/>
 Správce zpracovává osobní údaje návštěvníků portálu a zákazníků (dále také jen „návštěvník“ anebo „subjekt údajů“).
                         </p>
