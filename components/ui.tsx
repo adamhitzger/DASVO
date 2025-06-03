@@ -1,6 +1,6 @@
 "use client"
 
-import Map, {Marker} from "react-map-gl/mapbox"
+
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { Contact, Homepage } from "@/types";
 import { PortableText } from "next-sanity";
@@ -43,9 +43,7 @@ const actionState: ActionResponse<Contact> = {
 export default function UI({data}: {data: Homepage}){
     const anRef = useRef<HTMLDivElement>(null)
     const [an, setAn] = useState<boolean>(true)
-    const lng=15.5715228;
-    const lat=49.6106889;
-    const zoom=16;
+    
     const [state, action, isPending] = useActionState(sendData, actionState)
     useEffect(() => {
         if (!state.success && state.message) {
