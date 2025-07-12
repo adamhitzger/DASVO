@@ -43,6 +43,7 @@ const actionState: ActionResponse<Contact> = {
 export default function UI({data}: {data: Homepage}){
     const anRef = useRef<HTMLDivElement>(null)
     const [an, setAn] = useState<boolean>(true)
+    const [video, setVideo] = useState<boolean>(true)
     
     const [state, action, isPending] = useActionState(sendData, actionState)
     useEffect(() => {
@@ -113,7 +114,7 @@ export default function UI({data}: {data: Homepage}){
             Objednat
         </Link> 
             </div>
-            <Image src={data.headerPicture} alt="Alergologická ordinace DASVO s.r.o" width={544} height={544} className="rounded-2xl w-full md:w-1/2"/>
+            <Image src={data.headerPicture} alt="Alergologická ordinace DASVO s.r.o" width={544} height={544} className="rounded-2xl rounded-br-[80px] rounded-tl-[80px] w-full md:w-1/2"/>
         </section>
         <section className="w-full p-8 flex flex-col gap-5 md:flex-row-reverse bg-white  text-black">
             <div className="flex flex-col w-full md:w-1/2 space-y-4 justify-center">
@@ -203,7 +204,7 @@ export default function UI({data}: {data: Homepage}){
                 <li>Před prvním vyšetřením <span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">vysaďte</span>, prosím, léky užívané k léčbě alergie jako jsou Zyrtec, Zodac, Claritine, Aerius, Xyzal, Dithiaden a další na dobu <span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">minimálně 5 dní,</span> ideálně 2 týdny před vyšetřením být bez infekční nemoci</li>
                <li> První vyšetření v naší ambulanci trvá cca 45-60 minut. <span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">Doporučení</span> s výpisem dosud provedených vyšetření od praktického lékaře či specialisty <span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">vyžadujeme</span>, jelikož se tak urychlí diagnostika a léčba Vašich potíží</li>
                 <li>Po příchodu do čekárny je nutné použít Váš průkaz Zdravotní pojišťovny v terminálu k sestře a na displeji je nutné zadat kolonku <span className="underline underline-offset-2 decoration-wavy decoration-1   decoration-foreground font-bold">Nový, Přešetření</span></li>{/**/}
-                  <li>Registrace pacienta k vyšetření v čekárně <span className="underline underline-offset-2 decoration-wavy decoration-1  italic decoration-foreground ">viz. přiložené video</span></li>{/**/}
+                  <li>Registrace pacienta k vyšetření v čekárně <span className="underline underline-offset-2 decoration-wavy decoration-1  italic decoration-foreground cursor-pointer" onClick={() => setVideo(true)}>viz. přiložené video</span></li>
             </ul>
          </section>
         <section className="w-full p-8 flex flex-col gap-5 sm:flex-row bg-white text-right text-black">
@@ -365,8 +366,8 @@ export default function UI({data}: {data: Homepage}){
             <span className="font-bold underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground text-xl">Kontakt</span><br />
                  <span className="font-bold">E-mail na sestru: <Link href="mailto:sestra@dasvo.cz" className="font-light">sestra@dasvo.cz</Link></span>
                 <br /><span className="font-bold">Telefonní číslo: <Link href="tel:+420 569 434 375" className="font-light">+420  569 434 375</Link></span><br />
-                        {data.ordinacniDoba &&<p ><span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">Ordinační hodiny</span><PortableText value={data.ordinacniDoba}/></p>}
-                         {data.ordinacniHodiny &&<p><span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">AKTUÁLNÍ ZMĚNA ORDINAČNÍ DOBY</span>-<PortableText value={data.ordinacniHodiny}/></p>}
+                        {data.ordinacniDoba &&<><span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">Ordinační hodiny</span><PortableText value={data.ordinacniDoba}/></>}
+                         {data.ordinacniHodiny &&<><span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">AKTUÁLNÍ ZMĚNA ORDINAČNÍ DOBY</span>-<PortableText value={data.ordinacniHodiny}/></>}
                           <span>Poslední pacient <span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">30 minut</span> před koncem ordinace!</span><br/>
                            <span>Provozní doba odpovídá ordinační době!</span><br/>
                            <span><span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">Parkování</span> je možné v ulici před ambulancí a to  <span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">pouze během ordinační doby !</span> </span><br/>
@@ -389,6 +390,21 @@ export default function UI({data}: {data: Homepage}){
         >
         <X className="w-8 h-8" onClick={() => setAn(false)}/>
         {data.announcement}
+        </motion.div>
+        }
+        {video && data.video && 
+         <motion.div 
+        className="w-full md:w-1/3 h-fit fixed rounded-2xl flex flex-col items-end p-5 bg-white text-black text-xl z-5001 shadow-lg shadow-black/60" 
+        ref={anRef}
+        initial={{ scale: 0, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      exit={{ scale: 0, opacity: 0 }}
+      transition={{ duration: 0.3 }}
+        >
+        <X className="w-8 h-8" onClick={() => setVideo(false)}/>
+            <video controls>
+                <source src={data.video}/>
+            </video>
         </motion.div>
         }
         </AnimatePresence>

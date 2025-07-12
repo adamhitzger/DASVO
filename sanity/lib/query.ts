@@ -21,4 +21,5 @@ import { groq } from "next-sanity";
   },
   ordinacniDoba,
   ordinacniHodiny,
+  "video":video.asset->url
 }`

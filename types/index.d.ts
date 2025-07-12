@@ -38,6 +38,7 @@ export interface Homepage {
   pojistne: Pojistovny[],
   ordinacniDoba: any,
   ordinacniHodiny: any,
+  video: string
 }
 
 export type Contact = z.infer<typeof contact_form_schema>

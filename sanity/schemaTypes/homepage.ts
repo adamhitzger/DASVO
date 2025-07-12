@@ -38,6 +38,11 @@ export const homepage = defineType({
             type: "image",
         }),
         defineField({
+            name: "video",
+            title: "Zadejte video",
+            type: "file",
+        }),
+        defineField({
             name: "personal",
             title: "Personál",
             type: "array",
