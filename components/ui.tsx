@@ -43,7 +43,7 @@ const actionState: ActionResponse<Contact> = {
 export default function UI({data}: {data: Homepage}){
     const anRef = useRef<HTMLDivElement>(null)
     const [an, setAn] = useState<boolean>(true)
-    const [video, setVideo] = useState<boolean>(true)
+    const [video, setVideo] = useState<boolean>(false)
     
     const [state, action, isPending] = useActionState(sendData, actionState)
     useEffect(() => {
@@ -381,7 +381,7 @@ export default function UI({data}: {data: Homepage}){
         <AnimatePresence>
         {an && data.announcement && 
         <motion.div 
-        className="w-full md:w-1/3 h-fit absolute rounded-2xl flex flex-col items-end p-5 bg-white text-black text-xl z-5001 shadow-lg shadow-black/60" 
+        className="w-full md:w-1/3 h-fit fixed rounded-2xl flex flex-col items-end p-5 bg-white text-black text-xl z-5001 shadow-lg shadow-black/60" 
         ref={anRef}
         initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
