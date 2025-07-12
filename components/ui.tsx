@@ -78,7 +78,7 @@ export default function UI({data}: {data: Homepage}){
             },
             {
                 animation: fourth,
-                text: "Vyšetření dechu spirometrem, popř. přístrojem na analýzu vydechovaného oxidu dusnatého, vyšetření stupně okysličení krve."
+                text: "Vyšetření dechu spirometrem, popř. přístrojem na analýzu vydechovaného oxidu dusnatého, vyšetření stupně okysličení krve"
             },
             {
                 animation: third,
@@ -86,7 +86,7 @@ export default function UI({data}: {data: Homepage}){
             },
             {
                 animation: first,
-                text: "Podrobný rozhovor s pacientem. U dětských pacientů s jejich rodiči. Fyzikální vyšetření."
+                text: "Podrobný rozhovor s pacientem. U dětských pacientů s jejich rodiči. Fyzikální vyšetření"
             },
             {
                 animation: fifth,
@@ -94,7 +94,7 @@ export default function UI({data}: {data: Homepage}){
             },
             {
                 animation: sixth,
-                text: "Zhodnocení výsledků vyšetření, doporučení medikace a režimových, případně dietologických, opatření."
+                text: "Zhodnocení výsledků vyšetření, doporučení medikace a režimových, případně dietologických, opatření"
             }
         ];
         const lekari = data.personal.filter(l => l.isLekar);
@@ -163,7 +163,7 @@ export default function UI({data}: {data: Homepage}){
             <div className="w-full grid grid-cols-3 justify-items-center gap-5">
                  
                 {sestry.map((l,i) => (
-                    <div key={i} className="bg-gray-200 h-fit md:w-2/3 border p-2 rounded-xl backdrop-blur-3xl flex flex-col my-auto">
+                    <div key={i} className="bg-gray-200 h-fit md:w-2/3 border gap-3 p-2 rounded-xl backdrop-blur-3xl flex flex-col my-auto">
                       <span className="text-xl font-bold">{l.name}</span> 
                       <i>{l.isLekar ? "Lékař ISO 7010" : "Diplomovaná zdravotní sestra"}</i> 
                     <p className="font-light">
@@ -200,9 +200,10 @@ export default function UI({data}: {data: Homepage}){
                 ))}
             </div>
             <ul className="list-disc mt-5 mx-auto">
-                <li>Před prvním vyšetřením <span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">vysaďte</span>, prosím, léky užívané k léčbě alergie jako jsou Zyrtec, Zodac, Claritine, Aerius, Xybal, Dithiaden a další na dobu <span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">minimálně 5 dní.</span> ideálně 2 týdny před vyšetřením být bez infekční nemoci</li>
-               <li> První vyšetření v naší ambulaci trvá cca 45-60 minut. <span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">Doporučení</span> s výpisem dosud provedených vyšetření od praktického lékaře či specialisty <span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">vyžadujeme</span>, jelikož se tak urychlí diagnostika a léčba Vašich potíží.</li>
-                <li>Po příchodu do čekárny je nutné použít Váš průkaz Zdravotní pojišťovny v terminálu k sestře a na displeji je nutné zadat kolonku <span className="underline underline-offset-2 decoration-wavy decoration-1   decoration-foreground font-bold">Nový, Přešetření</span>.</li>
+                <li>Před prvním vyšetřením <span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">vysaďte</span>, prosím, léky užívané k léčbě alergie jako jsou Zyrtec, Zodac, Claritine, Aerius, Xyzal, Dithiaden a další na dobu <span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">minimálně 5 dní,</span> ideálně 2 týdny před vyšetřením být bez infekční nemoci</li>
+               <li> První vyšetření v naší ambulanci trvá cca 45-60 minut. <span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">Doporučení</span> s výpisem dosud provedených vyšetření od praktického lékaře či specialisty <span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">vyžadujeme</span>, jelikož se tak urychlí diagnostika a léčba Vašich potíží</li>
+                <li>Po příchodu do čekárny je nutné použít Váš průkaz Zdravotní pojišťovny v terminálu k sestře a na displeji je nutné zadat kolonku <span className="underline underline-offset-2 decoration-wavy decoration-1   decoration-foreground font-bold">Nový, Přešetření</span></li>{/**/}
+                  <li>Registrace pacienta k vyšetření v čekárně <span className="underline underline-offset-2 decoration-wavy decoration-1  italic decoration-foreground ">viz. přiložené video</span></li>{/**/}
             </ul>
          </section>
         <section className="w-full p-8 flex flex-col gap-5 sm:flex-row bg-white text-right text-black">
@@ -261,11 +262,11 @@ export default function UI({data}: {data: Homepage}){
                     Objednat se můžete skrze formulář níže nebo telefonicky na čísle <Link href={"tel:569434375"} className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">569 434 375</Link> v průběhu ordinačních hodin (nejlépe mezi 11-13 hodinou, úterý až pátek).
                 Pokud jste v naší ambulanci dosud nebyli vyšetřeni, bude Vás sestra telefonicky kontaktovat k doplnění údajů.
                 <br/>Vystavení e-receptů na JIŽ ordinovaná léčiva je nutné řešit <span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">pouze</span>  se sestrou na e-mailu <Link href={"mailto:sestra@dasvo.cz"} className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">sestra@dasvo.cz</Link>, telefonické objednávky omezte, prosím, na minimum !
-<br/>Konzultace zdravotního stavu s lékařem na e-mailu: <Link href={"mailto:lekar@dasvo.cz"} className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">lekar@dasvo.cz</Link>, vždy uveďte jméno lékaře, který o Vás pečuje a nezapomínejte uvést i jméno, příjmení, celé datum narození.
+<br/>Konzultace zdravotního stavu s lékařem na e-mailu: <Link href={"mailto:lekar@dasvo.cz"} className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">lekar@dasvo.cz</Link>, vždy uveďte jméno lékaře, který o Vás pečuje ,a nezapomínejte uvést i jméno, příjmení, celé datum narození.
 </p>
-<p className="my-1 text-lg"><span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">Nepoužívejte</span> e-mail: <span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">alergologiehb@quick.cz</span> od 1.7.2025 nebudeme tyto zprávy vyřizovat !</p>
-<p className="my-1 text-lg">Upozorňujeme: konzultace nabízíme pouze pacientům, kteří jsou u nás registrováni!</p>
 
+<p className="my-1 text-lg"><span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">Upozorňujeme:</span> konzultace nabízíme pouze pacientům, kteří jsou u nás registrováni!</p>
+<p className="my-1 text-lg"><span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">Nepoužívejte</span> e-mail: <span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">alergologiehb@quick.cz</span> od 1.7.2025 nebudeme tyto zprávy vyřizovat !</p>
                  <form action={action} className=" text-black grid grid-cols-1 text-lg sm:grid-cols-2 mt-5  w-full gap-5 ">
                 <div className='flex flex-col w-full space-y-2'>
                     <Label>Jméno:</Label>
@@ -359,17 +360,16 @@ export default function UI({data}: {data: Homepage}){
                 
             </form>
             </div>
-            <div id="map" className=" w-full md:w-1/2 flex-col space-y-4  rounded-xl">
-            <h1 className="font-bold  text-2xl text-center m-6 underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground">Ordinační hodiny</h1>
+            <div id="map" className=" w-full md:w-1/2 flex-col gap-4  rounded-xl">
+            <h1 className="font-bold  text-2xl text-center m-6 underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground">Kontaktní údaje a ordinační hodiny</h1>
             <span className="font-bold underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground text-xl">Kontakt</span><br />
                  <span className="font-bold">E-mail na sestru: <Link href="mailto:sestra@dasvo.cz" className="font-light">sestra@dasvo.cz</Link></span>
                 <br /><span className="font-bold">Telefonní číslo: <Link href="tel:+420 569 434 375" className="font-light">+420  569 434 375</Link></span><br />
-                 <span className="font-bold">Adresa: <Link href="/#map" className="font-light">Mahenova 3649, Havlíčkův Brod, 58001</Link></span><br />
                         {data.ordinacniDoba &&<p ><span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">Ordinační hodiny</span><PortableText value={data.ordinacniDoba}/></p>}
                          {data.ordinacniHodiny &&<p><span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">AKTUÁLNÍ ZMĚNA ORDINAČNÍ DOBY</span>-<PortableText value={data.ordinacniHodiny}/></p>}
                           <span>Poslední pacient <span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">30 minut</span> před koncem ordinace!</span><br/>
                            <span>Provozní doba odpovídá ordinační době!</span><br/>
-                           <span>Parkování je možné v ulici před ambulancí a to pouze <span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">během ordinační</span> doby !</span><br/>
+                           <span><span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">Parkování</span> je možné v ulici před ambulancí a to  <span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">pouze během ordinační doby !</span> </span><br/>
                            <span>V době absence lékaře, sester, upozorňujeme, že Vámi zaslané e-maily budou vráceny odesílateli bez přečtení, je nutné je zaslat znovu v termínu uvedeném v automatické odpovědi na patřičný e-mail</span><br/>
                  
           

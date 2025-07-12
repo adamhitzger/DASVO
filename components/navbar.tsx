@@ -9,11 +9,10 @@ import {
 import { Menu } from "lucide-react";
 
 export default function Navbar(){
-    
     return(
         <nav className="w-full gap-3 flex flex-row bg-white p-3 justify-between items-center text-black">
             <Link href={"/"} className="text-3xl md:text-5xl font-bold p-3 flex flex-nowrap text-white bg-foreground rounded-xl"> 
-            Dasvo &reg;
+            DASVO &reg;
             </Link>
 
             <div className="hidden md:flex flex-row  w-1/2 justify-between text-2xl">
@@ -30,7 +29,7 @@ export default function Navbar(){
                
             </div>
 
-            <Link href={"/kontak"} className="hidden md:flex text-2xl font-semibold py-2 px-7 text-white bg-foreground rounded-xl">
+            <Link href={"/#kontakt"} className="hidden md:flex text-2xl font-semibold py-2 px-7 text-white bg-foreground rounded-xl">
             Objednat
         </Link> 
              <Sheet>

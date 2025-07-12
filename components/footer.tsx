@@ -12,7 +12,7 @@ export default function Footer(){
                 <span className="font-bold">E-mail na sestru: <a href="mailto:sestra@dasvo.cz" className="font-light">sestra@dasvo.cz</a></span>
                 <span className="font-bold">Telefonní číslo: <a href="tel:+420 569 434 375" className="font-light">+420  569 434 375</a></span>
                 <span className="font-bold">DASVO s.r.o. <span className="font-light">, IČO: 28814801</span></span>
-                <span className="font-bold">Adresa: <Link href="/#map" className="font-light">DASVO s.r.o., Mahenova 3649, Havlíčkův Brod, 58001 (rodinný dům před parkovištěm u Nemocnice HB)</Link></span>
+                <span className="font-bold">Adresa: <Link href="/#map" className="font-light">Mahenova 3649, Havlíčkův Brod, 58001 (rodinný dům před parkovištěm u Nemocnice HB)</Link></span>
             </div>
             <div className="w-full md:w-1/2  flex flex-col ">
                 <h3 className="text-3xl font-bold underline underline-offset-4 decoration-wavy decoration-2 text-right md:text-left">Užitečné odkazy</h3>
