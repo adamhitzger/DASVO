@@ -100,7 +100,7 @@ export default function UI({data}: {data: Homepage}){
         ];
         const lekari = data.personal.filter(l => l.isLekar);
         const sestry = data.personal.filter(l => !l.isLekar);
-    console.log(data)
+    console.log(data.announcement)
     return(
         <main className="flex flex-col min-h-screen items-center space-y-5">
         <section className="w-full p-8 flex flex-col gap-5 md:flex-row bg-foreground text-white">
