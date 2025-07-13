@@ -17,13 +17,13 @@ export default function Navbar(){
 
             <div className="hidden md:flex flex-row  w-1/2 justify-between text-2xl">
                 
-                    <Link  href={"/o-nas"}>
+                    <Link  href={"/#o-nas"}>
                         O nás
                     </Link>
-                     <Link  href={"/vysetreni"}>
+                     <Link  href={"/#vysetreni"}>
                         1. vyšetření
                     </Link>
-                     <Link  href={"/cenik"}>
+                     <Link  href={"/#cenik"}>
                         Ceník
                     </Link>
                
@@ -37,16 +37,16 @@ export default function Navbar(){
         <Menu className="h-9 w-9 flex md:hidden"/>
       </SheetTrigger>
       <SheetContent className="bg-white text-black font-medium text-2xl p-4">
-                <Link  href={"/o-nas"}>
+                <Link  href={"/#o-nas"}>
                         O nás
                     </Link>
-                     <Link  href={"/vysetreni"}>
+                     <Link  href={"/#vysetreni"}>
                         1. vyšetření
                     </Link>
-                     <Link  href={"/cenik"}>
+                     <Link  href={"/#cenik"}>
                         Ceník
                     </Link>
-               <Link href={"/kontakt"} className=" text-2xl font-semibold py-2 px-7 w-fit text-white bg-foreground rounded-xl">
+               <Link href={"/#kontakt"} className=" text-2xl font-semibold py-2 px-7 w-fit text-white bg-foreground rounded-xl">
             Objednat
         </Link> 
       </SheetContent>
