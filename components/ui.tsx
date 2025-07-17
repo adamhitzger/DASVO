@@ -268,7 +268,7 @@ export default function UI({data}: {data: Homepage}){
 
 <p className="my-1 text-lg"><span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">Upozorňujeme:</span> konzultace nabízíme pouze pacientům, kteří jsou u nás registrováni !</p>
 <p className="my-1 text-lg"><span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">Nepoužívejte</span> e-mail: <span className="underline underline-offset-2 decoration-wavy decoration-1 decoration-foreground font-bold">alergologiehb@quick.cz</span>, od 1.7.2025 nebudeme tyto zprávy vyřizovat !</p>
-                 <form action={action} className=" text-black grid grid-cols-1 text-lg sm:grid-cols-2 mt-5  w-full gap-5 ">
+            <form action={action} className=" text-black grid grid-cols-1 text-lg sm:grid-cols-2 mt-5  w-full gap-5 ">
                 <div className='flex flex-col w-full space-y-2'>
                     <Label>Jméno:</Label>
                     <Input name="name" type="text" defaultValue={state.inputs?.name} placeholder={"Zadejte jméno"} required disabled={isPending} />
@@ -279,8 +279,8 @@ export default function UI({data}: {data: Homepage}){
                             )}
                 </div>
                 <div className='flex flex-col space-y-2 w-full'>
-                    <Label>Přijmení: </Label>
-                    <Input name="surname" type="text" defaultValue={state.inputs?.surname} placeholder={"Zadejte přijmení"} disabled={isPending} />
+                    <Label>Příjmení: </Label>
+                    <Input name="surname" type="text" defaultValue={state.inputs?.surname} placeholder={"Zadejte příjmení"} disabled={isPending} />
                     {state?.errors?.surname && (
                                  <p className="text-base font-semibold text-red-500">
                                  {state.errors.surname}
